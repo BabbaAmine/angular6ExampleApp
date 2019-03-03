@@ -5,11 +5,9 @@ import {ListUserComponent} from "./list-user/list-user.component";
 import {EditUserComponent} from "./edit-user/edit-user.component";
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
   { path: 'add-user', component: AddUserComponent },
-  { path: 'list-user', component: ListUserComponent },
   { path: 'edit-user', component: EditUserComponent },
-  {path : '', component : LoginComponent}
+  {path : '', component : ListUserComponent}
 ];
 
 export const routing = RouterModule.forRoot(routes);

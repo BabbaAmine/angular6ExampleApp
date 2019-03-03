@@ -9,12 +9,6 @@ export class UserService {
   baseUrl = 'http://localhost:8080/user-portal/users';
 
   getUsers() {
-     /*const fakeUsers = [{id: 1, firstName: 'Dhiraj', lastName: 'Ray', email: 'dhiraj@gmail.com'},
-     {id: 1, firstName: 'Tom', lastName: 'Jac', email: 'Tom@gmail.com'},
-     {id: 1, firstName: 'Hary', lastName: 'Pan', email: 'hary@gmail.com'},
-     {id: 1, firstName: 'praks', lastName: 'pb', email: 'praks@gmail.com'},
-   ];
-   return of(fakeUsers);*/
     return this.http.get<User[]>('http://babba0609.pythonanywhere.com/getAllUsers/');
   }
 
