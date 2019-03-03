@@ -8,6 +8,7 @@ import {User} from "../model/user.model";
   templateUrl: './list-user.component.html',
   styleUrls: ['./list-user.component.css']
 })
+
 export class ListUserComponent implements OnInit {
 
   users: User[];
@@ -17,7 +18,10 @@ export class ListUserComponent implements OnInit {
   ngOnInit() {
     this.userService.getUsers()
       .subscribe( data => {
-        this.users = data;
+        console.log(data);
+        this.users = data['list'];
+      }, error  => {
+        console.log(error);
       });
   }
 
